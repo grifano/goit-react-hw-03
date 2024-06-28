@@ -1,0 +1,21 @@
+.contactCard {
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #fa8a5b;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: #fff;
+  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contactInfoCol {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

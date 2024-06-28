@@ -1,0 +1,13 @@
+.searchBoxLabel {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.searchBoxInput {
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: 1px solid #fa8a5b;
+  min-height: 46px;
+  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+}

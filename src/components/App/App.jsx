@@ -1,63 +1,21 @@
-import { useEffect, useState } from "react";
 import css from "../App/App.module.css";
-import Description from "../Description/Description";
-import Feedback from "../Feedback/Feedback";
-import Options from "../Options/Options";
-import Notification from "../Notification/Notification";
+import ContactList from "../ContactList/ContactList";
+import SearchBox from "../SearchBox/SearchBox";
 
 export default function App() {
-  const [feedbackCount, setFeedbackCount] = useState(() => {
-    const feedbackCount = localStorage.getItem("feedback-count");
-    if (feedbackCount !== null) {
-      return JSON.parse(feedbackCount);
-    }
-
-    return {};
-  });
-
-  const totalFeedback =
-    feedbackCount.good + feedbackCount.neutral + feedbackCount.bad;
-  const positiveFeedback = Math.round(
-    (feedbackCount.good / totalFeedback) * 100
-  );
-
-  const updateFeedback = (feedbackType) => {
-    const lowerCaseFeedabckType = feedbackType.toLowerCase();
-    setFeedbackCount({
-      ...feedbackCount,
-      [lowerCaseFeedabckType]: feedbackCount[lowerCaseFeedabckType] + 1,
-    });
-  };
-
-  const resetFeedback = () => {
-    setFeedbackCount({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
-  };
-
-  useEffect(() => {
-    localStorage.setItem("feedback-count", JSON.stringify(feedbackCount));
-  }, [feedbackCount]);
+  const contacts = [
+    { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+    { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+    { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+    { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
+  ];
 
   return (
     <div className={css.container}>
-      <Description />
-      <Options
-        onUpdate={updateFeedback}
-        onReset={resetFeedback}
-        hasResetButton={totalFeedback != 0}
-      />
-      {totalFeedback != 0 ? (
-        <Feedback
-          feedbackCount={feedbackCount}
-          total={totalFeedback}
-          positive={positiveFeedback}
-        />
-      ) : (
-        <Notification text="No feedback yet" />
-      )}
+      <h1 className={css.title}>Phonebook</h1>
+      {/* <ContactForm /> */}
+      <SearchBox />
+      <ContactList contacts={contacts} />
     </div>
   );
 }

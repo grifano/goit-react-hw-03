@@ -1,0 +1,6 @@
+.feedbackList li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.feedbackList span {
+  font-weight: 700;
+}

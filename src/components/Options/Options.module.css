@@ -1,0 +1,10 @@
+.optionsList {
+  display: inline-flex;
+  padding: 16px 24px;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+}

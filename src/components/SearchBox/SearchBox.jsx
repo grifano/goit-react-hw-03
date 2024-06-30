@@ -1,12 +1,9 @@
 import css from "./SearchBox.module.css";
-import { useId, useState } from "react";
+import { useId } from "react";
 
-export default function SearchBox() {
+export default function SearchBox({ value, onSearch }) {
   const searchInput = useId();
-  const [inputValue, setInputValue] = useState("");
-  const handleInput = (evt) => {
-    setInputValue(evt.target.value);
-  };
+
   return (
     <label htmlFor={searchInput} className={css.searchBoxLabel}>
       Find contacts by name
@@ -14,8 +11,8 @@ export default function SearchBox() {
         type="text"
         id={searchInput}
         className={css.searchBoxInput}
-        value={inputValue}
-        onChange={handleInput}
+        value={value}
+        onChange={(evt) => onSearch(evt.target.value)}
       />
     </label>
   );

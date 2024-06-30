@@ -1,13 +1,18 @@
 .contactCard {
+  width: 100%;
   font-weight: 600;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #fa8a5b;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 24px;
   background-color: #fff;
-  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+}
+.contactCard button {
+  margin-left: auto;
 }
 .contactInfo {
   display: flex;

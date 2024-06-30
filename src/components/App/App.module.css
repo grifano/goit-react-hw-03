@@ -1,9 +1,35 @@
+.phonebook {
+  padding-top: 40px;
+}
 .container {
   padding: 40px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: start;
+  max-width: 80vw;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.phonebookContentWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.phonebookContactsWrap {
+  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+.containerCol {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .phonebookContentWrap {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .title {
   margin-bottom: 24px;

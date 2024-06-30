@@ -53,8 +53,8 @@ This repository contained the implementation of a phonebook application using Re
 
 ## Live Demo
 
-- **Source Files**: [GitHub Repository](https://github.com/yourusername/goit-react-hw-03)
-- **Working Page**: Vercel Deployment
+- **Source Files**: [GitHub Repository](https://github.com/grifano/goit-react-hw-03.git)
+- **Working Page**: [Live Preview](https://goit-react-hw-03-sooty-alpha.vercel.app/)
 
 ## Project Setup
 

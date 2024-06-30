@@ -2,63 +2,67 @@
 
 # React
 
-## Module 1: Components, Props, Vite
+## Module 3: Forms
 
 <img src="./src/assets/screenshot.png" alt="profile card, list of cards with animals icons" width="50%"/>
 
-### Task 1 - Social Media Profile Component\*\*
+This repository contained the implementation of a phonebook application using React. The project was created with Vite, used Formik for forms, and styled components with CSS modules. The application had several key functionalities, which are summarized below:
 
-1.  Create a <Profile> component that accepts the following props: name, tag, location, image, and stats.
+## Functionality Summary
 
-2.  Structure the component to display the user's information dynamically, based on the passed props.
+- **Contact Storage**:
 
-3.  Move the user data into a JSON file (userData.json) in the src directory and format it in JSON.
+  - Implemented a form to add new contacts.
+  - Displayed a list of contacts.
+  - Included a search box for filtering contacts by name.
 
-4.  Import the user data from the JSON file into the App component.
+- **Component Structure**:
 
-5.  Pass the imported data as props to the <Profile> component within the App component.
+  - Each component was organized in its own folder within `src/components`.
+  - Default exports were used for all components.
 
-### Task 2 - Friend List Component\*\*
+- **Initial Contacts**:
 
-1.  Create a <FriendList> component that accepts a friends prop, which is an array of friend objects.
+  - Predefined contacts were hardcoded for development and testing purposes.
 
-2.  Create a <FriendListItem> component that accepts avatar, name, and isOnline props.
+- **Search Functionality**:
 
-3.  In <FriendList>, render a list of <FriendListItem> components based on the friends array.
+  - Provided a search input field to filter contacts.
+  - Filter logic was case-insensitive.
 
-4.  Conditionally render the text and style in <FriendListItem> based on the isOnline prop.
+- **Form Validation**:
 
-5.  Move the friends' data into a JSON file (friends.json) in the src directory and format it in JSON.
+  - Used Formik for form creation.
+  - Integrated Yup for validation, enforcing:
+    - Required fields
+    - Minimum of 3 characters
+    - Maximum of 50 characters
 
-6.  Import the friends' data from the JSON file into the App component.
+- **Adding Contacts**:
 
-7.  Pass the imported data as props to the <FriendList> component within the App component.
+  - Implemented functionality to add contacts with `name`, `number`, and a unique `id` generated using `nanoid`.
 
-### Task 3 - Transaction History Component\*\*
+- **Deleting Contacts**:
 
-1.  Create a <TransactionHistory> component that accepts an items prop, which is an array of transaction objects.
+  - Allowed users to delete contacts from the list.
 
-2.  Structure the component to display a table with the transaction data, including columns for Type, Amount, and Currency.
+- **Local Storage**:
 
-3.  Move the transactions' data into a JSON file (transactions.json) in the src directory and format it in JSON.
+  - Contacts were saved in local storage upon addition and deletion.
+  - On application load, contacts were retrieved from local storage and set in the state.
 
-4.  Import the transactions' data from the JSON file into the App component.
+## Live Demo
 
-5.  Pass the imported data as props to the <TransactionHistory> component within the App component.
+- **Source Files**: [GitHub Repository](https://github.com/yourusername/goit-react-hw-03)
+- **Working Page**: Vercel Deployment
 
----
+## Project Setup
 
-## Acknowledgments
+1.  Clone the repository.
+2.  Install dependencies: `npm install`
+3.  Start the development server: `npm run dev`
 
-<img src="https://goit.global/mx/assets/images/logo-goit.svg" alt="goit logo" width="10%"/>
+## Code Quality
 
-[GOIT](https://edu.goit.global/uk/referral?x=eyJlbWFpbCI6InNvcmxlbmtAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoi0KHQtdGA0LPRltC5IiwibG9jYWxlIjoidWsiLCJsYW5ndWFnZSI6InVrIiwidG90YWxIb3VycyI6NzcsImN1cnJlbnRPckxhc3RUZWNobm9sb2d5IjoiSFRNTF9DU1MiLCJwYXNzZWRIb21ld29ya3NDb3VudCI6NX0=) -
-big love to GoIT team for their patience, afford, help, and positivity that they
-share with us ❤️
-
-## Author
-
-- Website - [www.grifano.com](https://grifano.com)
-- Frontend Mentor -
-  [www.frontendmentor.com](https://www.frontendmentor.io/profile/grifano)
-- LinkedIn - [www.linkedin.com](https://www.linkedin.com/in/grifano/)
+- Ensured no errors or warnings in the console.
+- Maintained clean and understandable JavaScript code using Prettier for formatting.

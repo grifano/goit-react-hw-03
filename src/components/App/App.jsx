@@ -16,7 +16,9 @@ export default function App() {
 
     return initialContacts;
   });
-  const initialValue = { id: "", name: "", number: "" };
+
+  // Contact form state
+  const [formData, setFormData] = useState({ id: "", name: "", number: "" });
 
   // Search contact
   const [searchValue, setSerachValue] = useState("");
@@ -25,18 +27,15 @@ export default function App() {
   );
 
   // Add contact
-  const addContact = (values, actions) => {
-    console.log(values);
-    const newContact = {
-      id: nanoid(),
-      name: values.name,
-      number: values.number,
-    };
-    setContacts((prevContacts) => {
-      return [...prevContacts, newContact];
-    });
-    actions.resetForm();
+  const addContact = () => {
+    const newContact = { ...formData, id: nanoid() };
+    if (formData.name && formData.number) {
+      setContacts((prevContacts) => {
+        return [...prevContacts, newContact];
+      });
+    }
   };
+  useEffect(addContact, [formData]);
 
   // Delete contact
   const deleteContact = (contactId) => {
@@ -56,7 +55,7 @@ export default function App() {
         <h1 className={css.title}>Phonebook</h1>
         <div className={css.phonebookContentWrap}>
           <div className={css.containerCol}>
-            <ContactForm initialValue={initialValue} onSubmit={addContact} />
+            <ContactForm initialValue={formData} onSubmit={setFormData} />
           </div>
           <div className={css.containerCol}>
             <div className={css.phonebookContactsWrap}>

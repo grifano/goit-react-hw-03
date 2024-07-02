@@ -18,10 +18,19 @@ export default function ContactForm({ initialValue, onSubmit }) {
       .required("Required"),
   });
 
+  const handleSubmit = (values, actions) => {
+    const newContact = {
+      name: values.name,
+      number: values.number,
+    };
+    onSubmit(newContact);
+    actions.resetForm();
+  };
+
   return (
     <Formik
       initialValues={initialValue}
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit}
       validationSchema={validationSchema}
     >
       {({ isValid, dirty }) => (

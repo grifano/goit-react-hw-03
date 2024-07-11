@@ -4,7 +4,7 @@
 
 ## Module 3: Forms
 
-<img src="./src/assets/screenshot.png" alt="app screenshot" width="50%"/>
+<img src="./src/assets/screenshot.webp" alt="app screenshot" width="50%"/>
 
 This repository contained the implementation of a phonebook application using React. The project was created with Vite, used Formik for forms, and styled components with CSS modules. The application had several key functionalities, which are summarized below:
 

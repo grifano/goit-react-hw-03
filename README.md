@@ -1,6 +1,6 @@
 <img src="./src/assets/react-logo.svg" alt="react logo" width="10%"/>
 
-# React
+# React Phonebook App
 
 ## Module 3: Forms
 
